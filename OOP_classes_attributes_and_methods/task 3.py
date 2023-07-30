@@ -5,7 +5,11 @@ import random
 class Revolver:
     def __init__(self, indicator, revolver_drum=[], ):
         self.revolver_drum = revolver_drum
-        self.indicator = random.choice([bullet for bullet in [0, 1, 2, 3, 4, 5] if self.revolver_drum[bullet] == True])
+        try:
+            self.indicator = random.choice(
+                [bullet for bullet in [0, 1, 2, 3, 4, 5] if self.revolver_drum[bullet] == True])
+        except IndexError:
+            print('Кажется возникла ошибка :(')
 
     def add_bulet(self):
         if self.revolver_drum[0] == 0:
