@@ -65,6 +65,7 @@ if __name__ == "__main__":
     for task in completed_tasks:
         print(task)
 
+    # Комментарий для проверки изменений в пулл реквесте
     print("Updated Task List:")
     for task in task_list.tasks:
         print(task)
